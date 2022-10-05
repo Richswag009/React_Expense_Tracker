@@ -1,11 +1,7 @@
-import React, { Component } from 'react'
-
-export default class UserItem extends Component {
+import React from 'react'
+import PropTypes  from 'prop-types';
+export default function UserItem({user:{login,avatar_url,html_url}}) {
      
-  
-
-    render() {
-        const{login,avatar_url,html_url}=this.props.user;
         return (
             <div className='card text-center'>
                 <img src={avatar_url}
@@ -18,5 +14,7 @@ export default class UserItem extends Component {
                 </div>  
             </div>
         )
-    }
+}
+UserItem.PropTypes={
+    user: PropTypes.object.isRequired
 }

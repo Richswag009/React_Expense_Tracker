@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 
 
 const Users =({users,loading})=> {
-// if(loading){
-//    return <Spinner/>
-// }else{
+if(loading){
+   return <Spinner/>
+}else{
  return (
         <div style={userStyle}>
                 {users.map(user =>(
@@ -16,7 +16,7 @@ const Users =({users,loading})=> {
             </div>
         );
     }
-// }
+}
 Users.prototype={
     users :PropTypes.array.isRequired,
     loading:PropTypes.bool.isRequired
