@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Expenses from "./Component/Expenses";
+import Expenses from "./Component/Expenses/Expenses";
 const App = () => {
   return (
     <div>
