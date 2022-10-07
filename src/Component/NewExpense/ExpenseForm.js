@@ -29,7 +29,7 @@ const ExpenseForm = (props) => {
     // alternate way to set usestate
     // setUserInput({
     //   ...userInput,
-    //     enteredTitle: event.target.value
+    //     enteredAmount: event.target.value
     // })
   };
   const handleDateInput = (event) => {
@@ -38,7 +38,7 @@ const ExpenseForm = (props) => {
     // alternate way to set usestate
     // setUserInput({
     //   ...userInput,
-    //     enteredTitle: event.target.value
+    //     enteredDate: event.target.value
     // })
   };
 
@@ -85,7 +85,13 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className='new-expense__actions'>
-        <button type='Submit'>Add Expense</button>
+        <button type='button' onClick={props.onCancelEditing}>
+          {" "}
+          Cancel
+        </button>
+        <button type='Submit' onClic>
+          Add Expense
+        </button>
       </div>
     </form>
   );
